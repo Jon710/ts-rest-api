@@ -1,4 +1,3 @@
-
 import mongoose, { Document, Model } from 'mongoose';
 import AuthService from '@src/services/auth';
 
