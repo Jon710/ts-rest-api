@@ -26,7 +26,8 @@ describe('Beach forecast functional tests', () => {
     await new Beach(defaultBeach).save();
     token = AuthService.generateToken(user.toJSON());
   });
-  it('should return a forecast with just a few times', async () => {
+  
+  it.skip('should return a forecast with just a few times', async () => {
     nock('https://api.stormglass.io:443', {
       encodedQueryParams: true,
       reqheaders: {
