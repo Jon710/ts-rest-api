@@ -27,7 +27,7 @@ describe('Beach forecast functional tests', () => {
     token = AuthService.generateToken(user.toJSON());
   });
 
-  it.skip('should return a forecast with just a few times', async () => {
+  it('should return a forecast with just a few times', async () => {
     nock('https://api.stormglass.io:443', {
       encodedQueryParams: true,
       reqheaders: {
@@ -41,6 +41,7 @@ describe('Beach forecast functional tests', () => {
         lng: '151.289824',
         params: /(.*)/,
         source: 'noaa',
+        end: /(.*)/,
       })
       .reply(200, stormGlassWeather3HoursFixture);
 
